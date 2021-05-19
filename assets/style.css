@@ -1,0 +1,763 @@
+body {
+background-image: url('images/bg1.jpg'), url('');
+background-position: center top;
+background-repeat: no-repeat;
+background-size: 100vw, calc(100vw * 2.41);
+
+height: calc(100vw * 2.41);
+width: 100vw;
+
+justify-content: center;
+text-align: center;
+align-items: center;
+align-content: center;
+vertical-align: center;
+margin: 0 auto;
+padding: 0 0;
+font-family: Metrophobic;
+  font-variant-caps: small-caps;
+  position: relative;
+  border: solid GreenYellow 0px;
+  /*filter: blur(10px);*/
+   
+}
+
+
+.bodyOpenChest {
+background-image: url('images/bg2.jpg');
+background-position: center top;
+background-repeat: no-repeat;
+background-size: 100vw, calc(100vw * 2.41);
+
+height: calc(100vw * 2.41);
+width: 100vw;
+border: dashed blue 0px;
+justify-content: center;
+text-align: center;
+align-items: center;
+align-content: center;
+vertical-align: center;
+margin: 0 auto;
+padding: 0 0;
+font-family: Metrophobic;
+  font-variant-caps: small-caps;
+  position: relative;
+  border: solid GreenYellow 0px;
+  /*filter: blur(10px);*/
+   
+}
+
+.usb-modal-content {
+  background-image: url('images/blueprint.jpg');
+  background-size: cover;
+  background-color: rgba(255,0,0, 0.2);
+  margin: 3% auto; /* 15% from the top and centered */
+  padding: 0;
+  border: 4px solid white;
+  width: 65.4vw;
+  height: 48.0vw; /* Could be more or less, depending on screen size */
+}
+
+
+/* The Modal (background) */
+.usbModalBackground {
+  display: none;/* Hidden by default */
+  position: fixed; /* Stay in place */
+  background-image: url("");
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  z-index: 89;
+  
+  
+}
+
+
+
+
+/* The Modal (background) */
+.introVideoModalBackground {
+  /* Hidden by default */
+  position: fixed; /* Stay in place */
+  background-image: url("");
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  z-index: 88;
+  
+  
+}
+
+/* Modal Content/Box */
+.introVideo-modal-content {
+  background-image: url("");
+  background-size: cover;
+  background-color: rgba(255,0,0, 0.2);
+  margin: 3% auto; /* 15% from the top and centered */
+  padding: 0;
+  border: 1px solid #888;
+  width: 80vw;
+  height: 45vw; /* Could be more or less, depending on screen size */
+  
+}
+
+
+#introVideoIframe { 
+            overflow: hidden;
+            overflow-y: none;
+            overflow-x: none;
+            border:3px solid pink; 
+            background-color: rgba(0,0,0,0.0); 
+            width: 100%; 
+            height: 100%; 
+            position: relative; 
+            cursor: pointer;
+            padding: 0 0;
+            margin: 0;
+          }
+
+
+/* The Close Button */
+.closeintroVideo {
+  color: #aaa;
+  float: right;
+  font-size: 2vw;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.closeintroVideo:hover,
+.closeintroVideo:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* COORDINATES MODEL */
+
+#coordinatesButton       {     
+  position: absolute;
+  top: 10vw;
+  left: 7vw;
+  width: 40vw;
+  height: 30vw;
+  background-color: rgba(0,0,0,0.0);
+  background-image: url("images/coordinates-small.png");
+  background-size: cover;
+  border: none;
+  transition: all 200ms ease-in-out;
+  will-change: transform;
+  transform: rotate(45deg);
+  z-index: 70;
+              }
+
+/* The Modal (background) */
+.coordinatesModalBackground {
+  display: none;  /*Hidden by default */
+  position: fixed; /* Stay in place */
+
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
+  z-index: 80;
+  
+}
+
+/* Modal Content/Box */
+.coordinates-modal-content {
+  background-image: url("images/coordinates-blank.png");
+  background-size: cover;
+  background-color: rgb(10,0,0, 0.2);
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 2%;
+  border: 1px solid #888;
+  width: 80vw;
+  height: 60vw; /* Could be more or less, depending on screen size */
+  text-align: left;
+  
+}
+
+
+/* The Close Button */
+.closeCoordinates {
+  color: #aaa;
+  float: right;
+  font-size: 2vw;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.closeCoordinates:hover,
+.closeCoordinates:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 80; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(10,0,0,0.6); /* Black w/ opacity */
+  
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: rgb(10,0,0, 0.7);
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 2%;
+  border: 1px solid red;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: auto;
+  z-index: 81; /* Sit on top */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/*      IFRAMES       */
+
+
+
+
+
+#phoneBFTF { 
+            overflow: hidden;
+            border:0px solid yellow; 
+            background-color: rgba(0,0,0,0.0); 
+            width: 65vw; 
+            height: calc(65vw*0.63); 
+            position: absolute; 
+            right: 0vw; 
+            top: 58vw; 
+            overflow-y: none;
+            overflow-x: none;
+            cursor: pointer;
+          }
+
+
+#flowXOchatbox {
+            border: 2px solid silver; width: 30vw; height: 50.5vw; 
+            -webkit-border-radius: 24px; 
+            -moz-border-radius: 24px; 
+            -webkit-backface-visibility: hidden;
+ -moz-backface-visibility: hidden;
+ -webkit-transform: translate3d(0, 0, 0);
+ -moz-transform: translate3d(0, 0, 0);
+            border-radius: 24px; 
+            position: absolute; left: 64.5vw; top: 3vw;
+
+            }
+
+
+
+#padlockIframe {
+          width: 100%;
+          height: 80vh;
+          overflow-y: none;
+            overflow-x: none;
+            cursor: pointer;
+        }
+
+
+
+
+.iframinIt {background-color: black;}
+
+
+/*STYLING OF THE PADLOCK TRIGGERING OF THE MODAL*/
+#padlockButton {
+            position: absolute;
+            left: 20vw;
+            top: 75vw;
+            width: 7vw; 
+            height: 9vw; 
+            background-color: rgba(0,0,0,0.0);
+            border: none;
+            }
+
+#padlockButton:hover {
+            scale: 0.9;
+            background-color: rgba(0,255,0,0.1);
+            cursor: pointer;
+            }
+
+
+
+        .topItems {
+  width: 50%;
+  height: auto;
+  position: relative;
+  transition: 800ms;
+  box-shadow: rgba(200,0,0,0.9);
+
+}
+
+.hoverItems {
+  width: 20vw;
+  height: auto;
+  position: absolute;
+  transition: 800ms;
+  box-shadow: rgba(200,0,0,0.9);
+  cursor: pointer;
+
+}
+
+.hoverItems:hover { transform: scale(1.5); z-index: 100; margin-left: 10vw;z-index: 100;}
+
+
+.hoverVII {
+  width: 20vw;
+  height: auto;
+  position: absolute;
+  transition: 800ms;
+  box-shadow: rgba(200,0,0,0.9);
+  cursor: pointer;
+
+}
+
+.hoverVII:hover { transform: scale(1.9); z-index: 100; margin-right: 5vw;z-index: 100;}
+
+
+
+
+#alamoId {  
+  width: 20vw;
+  height: auto;
+  position: absolute;
+  transition: 800ms;
+  cursor: pointer;
+  transform: rotate(25deg);}
+
+
+#alamoId:hover {  
+  
+  transform: rotate(-15deg) scale(2.0);z-index: 100;}
+
+
+
+#cardId {  
+  width: 20vw;
+  transition: 800ms;
+  cursor: pointer;
+  transform: rotate(-20deg);}
+
+
+#cardId:hover {  
+  
+  transform: rotate(5deg) scale(2.0);
+  z-index: 100;}
+
+
+#leftPostcardId {  
+  width: 15vw;
+  transition: 800ms;
+  cursor: pointer; 
+  transform: rotate(85deg);
+  
+  }
+  
+#leftPostcardId:hover {  
+  transform: rotate(65deg) scale(1.5);z-index: 100;}
+
+#rightPostcardId {  
+  width: 15vw;
+  transition: 800ms;
+  cursor: pointer; 
+  transform: rotate(-17deg);
+  }
+  
+#rightPostcardId:hover {  
+  transform: rotate(-25deg) scale(1.5);z-index: 99;}
+
+
+
+#IIIa       { position: absolute; 
+              left: 3vw; 
+              top: 140vw; 
+              height: 40vw; 
+              width: auto;
+              transition: 1s;
+            }
+
+#IIIa:hover {right: 14vw; transform: scale(1.9);}
+
+#rightside 
+{
+        
+        
+        
+        float: left;
+
+        width: 35vw; 
+        height: 70vh;
+        margin: 0px;
+
+
+        background-color: rgba(0,0,0,0.0);  
+        border: solid red 0px;
+}
+
+.imageDivs {background-image: url('images/VII.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 35vw;
+			height: 35vw;
+			border: dashed blue 0px;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+			align-content: center;
+			vertical-align: center;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			margin-bottom: 0;}
+
+#playId { border-left: 9.8vh solid black;
+          border-top: 8.5vh solid transparent;
+          border-bottom: 8.5vh solid transparent;
+          background: transparent;
+          cursor: pointer;
+        }
+
+#playId:active { transform: scale(0.8);}
+
+
+
+
+/*actual text*/
+h2 
+{
+          font-family: Metrophobic;
+          color: white;
+          font-size: 1.5vw;
+          display: flex;
+          font-variant-caps: small-caps;
+          border: solid orange 0px;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          align-content: center;
+          vertical-align: center;
+          border: solid red 0px;
+          padding: 1vw;
+         
+}
+
+p 
+{
+          font-family: Metrophobic;
+          color: white;
+          font-size: 1.2vw;
+          display: flex;
+          font-variant-caps: small-caps;
+          border: solid orange 0px;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          align-content: center;
+          vertical-align: center;
+          padding-left: 1vw;
+          padding-right: 1vw;
+}
+
+
+
+/*-------------------------------------------------------------------------
+------------------------   EVERYTHING WITH PLAY BUTTON FOR PUZZLE 7 -------*/
+
+  .squareClass {position: absolute;
+                  width: 10vw;
+                  height: 10vw;
+                  top: 145vw;
+                  left: 72vw;
+                  background-color: rgba(0,0,0,0.3);
+                  border: 2px solid red;
+                  border-radius: 100%;
+                  transition: all 200ms ease-in-out;
+                  will-change: transform;
+                  z-index: 79;
+            }
+    
+
+.squareClass:active   {transform: scale(0.97); background-color: rgba(0,0,0,0.9);}
+.squareClass:hover    {transform: scale(0.97);}
+#squareId:hover + .buttonClass {transform: scale(0.97);}          
+
+
+
+
+#playButtonId       {     position: absolute;
+                      
+                      top: 147vw;
+                      left: 75vw;
+                      background-color: rgba(0,0,0,0.0);
+                      transition: all 200ms ease-in-out;
+                      will-change: transform;
+                      z-index: 79;
+              }
+
+.audioPlayClass  {       position: absolute;
+                      border-left: solid 5vw rgba(220,0,0,0.9);
+                      border-top: solid 3vw transparent;
+                      border-bottom: solid 3vw transparent;
+                      border-right: solid 0vw transparent;
+                      
+                      background-color: rgba(0,0,0,0.0);
+                      transition: all 200ms ease-in-out;
+                      will-change: transform;
+              }
+
+
+.audioPauseClass  {   position: absolute;
+                    height: 5vw;
+                    width: 4vw;
+                    margin-top: 1%;
+                    border-left: solid red 1vw;
+                    border-right: solid red 1vw;
+                      border-top: transparent 0px;
+                      border-bottom: transparent 0px;
+                      background-color: rgba(0,0,0,0.0);
+                      background-color: rgba(0,0,0,0.0);
+                      transition: all 200ms ease-in-out;
+                      will-change: transform;
+              }
+
+    
+
+
+
+/*TEST*/
+.headingAnimation {
+              position: relative; 
+              color: black;
+              animation-name: Heading;
+              animation-duration: 4s;
+            }
+
+@keyframes Heading {
+    0%   {color: white; left: -100vh;}
+  
+  100% {color: black; left: 0vh;}
+}
+
+
+#puzzleVIIrules{
+        position: absolute; 
+        border: solid 8px rgba(255,0,0,0.8);
+        margin-left: 10vh;
+        margin-right: 10vh;
+        margin-top: 10vh;
+        background-color: rgba(255,255,255,0.7);
+        color: black;
+        /*transition-duration: 5s;
+        transition-delay: 2s;*/
+        animation-name: example;
+  animation-duration: 6s;
+    
+  animation-fill-mode: forwards;
+
+
+            }
+@keyframes example {
+  0%   {background-color: rgba(200,200,200,0.9); color: rgba(0,0,0,0.3); border: solid 8px rgba(0,0,0,0.9);}
+        
+  25%  {color: rgba(0,0,10,0.5);}
+  50%  {color: rgba(0,10,0,0.7);}
+  100% {background-color: rgba(255,255,255,0.7); color: rgba(0,0,10,0.9); border: solid 8px rgba(255,255,255,1.0);}
+}
+
+            
+
+
+
+
+
+
+
+
+
+
+/*  ALL THE DRAGGING OVERLAY OVER THE IMAGE FOR PUZZLE FJORD*/
+/*TO PUSH THE GRAVE DROP ZONE WHERE EVER
+#alpha {margin-top: 40%;}
+#echo {margin-top: 35%;}
+#india {margin-top: 35%;}
+#mike {margin-top: 35%;}
+
+
+/*DIV FOR ALL BLANK SPOTS*/
+.blankarea {border-style: dotted;
+border-color: red; 
+padding-top: 0%;
+padding-left: 1%;
+padding-right: 1%;
+height: 96vh;
+border: blue dashed 0px;
+/*
+background-image: url("");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+*/
+}
+
+
+
+.draggable
+{
+  background:  rgba(0,0,0,0.0);
+  cursor:      move;
+  font-weight: bold;
+  list-style:  none;
+  padding-top:     3%;
+  padding-left:     3%;
+  padding-right:     3%;
+
+  border-color: blue;
+  
+  z-index: 100;
+  display: flex;
+}
+
+
+#solvedtext 
+{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: green;
+    display: none;
+}
+
+/*  STARTING AREA FOR TABS  */
+.dropzone
+{
+  min-height: 1%;
+  flex: 1;
+  justify-content: center;
+
+}
+
+
+
+.graveimg 
+{
+    width: 30vw;
+    margin: 0px;
+    height: auto;
+    
+
+}
+
+
+
+
+
+/* VIDEO LOADING*/
+
+
+
+
+.videoDisplayClass {
+  width: 58vw;
+  height: 35vw;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 1;
+
+        top: 13vh;
+        left: 20.6vw;
+    
+  
+  border-radius: 5px;
+  border: solid yellow 0px;
+  color: white;
+  z-index: 100;
+}
+
+.videoDivClass {
+ width: calc(64vh * (16/9));
+        height: 70vh;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 1;
+
+        top: 13vh;
+        left: 20.5vw;
+    
+  display: block;
+  border-radius: 5px;
+  border: solid darkgrey 0px;
+  z-index: 100;
+}
+
+
+
+.videoPlayerClass {
+  position: absolute; 
+  left: -0vw;
+        padding-top: 0vh;
+        width: calc(64vh * (16/9));
+        height: 64vh;
+        border: solid orange 0px;
+       
+        }

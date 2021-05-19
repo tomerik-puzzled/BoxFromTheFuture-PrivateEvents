@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Box From The Future - GH</title>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.7/lib/draggable.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/swappable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/plugins.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Metrophobic">
+    <link rel="stylesheet" href="assets/fonts/lp132font/stylesheet.css">
+     
+     <link rel="stylesheet" href="/assets/style.css">
+    <!--LOCAL LINKING-->
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="..assets/main.js"></script>
+    <script src="/assets/main.js"></script>
+    <script src="assets/main.js"></script>
+</head>
+
+<body id="thebody">
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--introVideo -->
+
+            <!-- Trigger/Open The INTRO VIDEO Modal -->
+         
+            <div hidden id="introVideoModal" class="introVideoModalBackground">
+
+            <!-- Modal content -->
+            <div class="introVideo-modal-content"> 
+                
+               <div id="zout" style="width: 5vw; height: 5vw; background-color: white; z-index: 100; position: absolute; top: 5vh; right: 5vw; background-image: url('assets/images/x.png'); background-size: cover; border-radius: 50%;" onclick="closeIntroVideo()"></div>
+           
+           <iframe src="https://player.vimeo.com/video/467496691" id="introVideoIframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+           
+            </div>
+
+            </div>
+
+
+            
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--COORDINATES -->
+
+            <!-- Trigger/Open The Modal -->
+            <button id="coordinatesButton" style="z-index: 80;" onclick="openCoordinatesFunction()"></button>
+
+            <!-- The Modal -->
+            <div id="coordinatesModal" class="coordinatesModalBackground">
+
+            <!-- Modal content -->
+            <div class="coordinates-modal-content"> 
+                <div id="xout" style="width: 5vw; height: 5vw; background-color: transparent; z-index: 100; float: right; background-image: url('assets/images/x.png'); background-size: cover;" onclick="closeCoordinates()"></div>
+                
+           <p style="position: absolute; padding-left: 7%; padding-top: 5%; font-size: 1.9vw; font-family: 'line_printer_132regular'; color: black; text-transform: uppercase; text-align: left; line-height: 2.5385vw;">
+            29.9576024, -90.0621559<br>
+            I had a delicious beignet before I drove down North Peters. With my windows<br>
+            down the muggy air carried great live music. I headed up Franklin passing <br>
+            stylish hipsters, and after about 10-11 blocks, I reached my destination <br>
+            on the right.<br>
+            <br>
+            42.342023, -71.082489<br>
+            I walked through the colorful garden path and entered the subway<br> 
+            by a subway. After 4 stops northwards we were forced off due to issues on<br>
+            the line between our current station and the next. I crossed the concourse<br> 
+            to the green line. Going onwards I rode for another stop and transferred<br>
+            to the blue line. back on track, I rode for three stops, <br>
+            I exited to Sumner. On the northeast corner, I saw my royal destination. <br>
+            <br>
+            34.162636, -118.440271<br>
+            I enjoyed the evening sun as i crossed the park, seeing sculpted<br>
+            shirtless dudes as they threw frisbees around me. i walked<br>
+            between the orange-white striped community center. <br>
+
+
+            </p>
+
+            </div>
+
+            </div>
+
+            
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--CHAT BOX FLOWXO-->
+            <iframe src="https://fxo.io/m/6ax3am7p" id="flowXOchatbox" style="" allowfullscreen></iframe>
+<!------------------------------------------------------------------------------------------------------------------->
+
+                                    
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--PHONE BOX FLOWXO-->
+            <iframe id="phoneBFTF" src="assets/BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--- CHEST POP-UP --->
+                
+              <!-- Trigger/Open The Modal -->
+            <button id="padlockButton" onclick="chesty();"></button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+            
+            <!-- CLOSE MODAL BUTTON -->
+            <div id="yout" style="width: 3vw; height: 3vw; margin: 0; padding: 0; background-color: transparent; z-index: 100; float: right; background-image: url('assets/images/x.png'); background-size: cover; background-repeat: none;" onclick="closePadlock()"></div>
+
+
+            <iframe src="assets/chestPadlock/index.html" id="padlockIframe"  allowfullscreen></iframe>
+            </div>
+
+            </div>
+
+
+            <script>
+                 function chesty() {document.getElementById('myModal').style.display = "block";}
+
+                  function closePadlock() {
+                                    document.getElementById('myModal').style.display = "none";
+                                    document.getElementById('padlockButton').style.display = "block";
+                                    }
+
+
+                function closeCoordinates() {
+                                    document.getElementById('coordinatesModal').style.display = "none";
+                                    document.getElementById('coordinatesButton').style.display = "block";
+                                    document.getElementById('coordinates-modal-content').style.display = "none";
+                                    }
+
+                    
+                $( document ).on( 'keydown', function ( e ) {
+                    if ( e.keyCode === 27 ) { // ESC
+                        
+                        document.getElementById('myModal').style.display = "none";
+                        document.getElementById('coordinatesModal').style.display = "none";
+                        document.getElementById('coordinatesButton').style.display = "block";
+                        document.getElementById('padlockButton').style.display = "block";
+                    }
+                });
+
+                function openCoordinatesFunction() {        document.getElementById('coordinatesModal').style.display = "block";}
+
+
+                function openIntroVideoFunction() {
+                        document.getElementById('introVideoModal').style.display = "block";
+                        document.getElementById('thebody').style.overflow = "hidden";
+                        document.getElementById('zout').style.display = "block";
+                    }
+
+
+                function closeIntroVideo() {
+                                    document.getElementById('introVideoModal').style.display = "none";
+                                    document.getElementById('thebody').style.overflow = "auto";
+                                    document.getElementById('zout').style.display = "none";
+                                    }
+
+                function closeCoordinates() {
+                                    document.getElementById('coordinatesModal').style.display = "none";
+                                    document.getElementById('coordinatesButton').style.display = "block";
+                                    document.getElementById('coordinates-modal-content').style.display = "none";
+                                    }
+
+            </script>
+ <!------------------------------------------------------------------------------------------------------------------->               
+
+
+
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+<!---------     ALL THE ROMAN NUMERAL PUZZLES BELOW        ------>
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+           <!--ROMAN NUMERAL I-->
+            <img src="assets/images/I-forgoodtime.png" class="hoverItems" style="position: absolute; left: 2vw; top: 190vw; box-shadow: -10px 20px 9px 0 rgba(255, 0, 0, 0.2), 10px 40px 13px 0 rgba(0, 0, 255, 0.2);">
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL II   &   VIII--> 
+            <img hidden id="II" src="assets/images/II-color.jpg" class="hoverItems" style="position: absolute; left: 1vw; top: 90vw;" onclick="imageSwap()">
+            <img id="VIII" src="assets/images/VIII-color.jpg" class="hoverItems" onclick="imageSwap()" style="position: absolute; left: 1vw; top: 90vw;" >
+            <!--<h1 id="gimme" style="position: absolute; left: 1vw; top: 230vh;" >val</h1> -->
+                    <script>
+                    var imageStatus = 0;
+                    function imageSwap() {
+                    		if (imageStatus === 0) {document.getElementById('VIII').style.display = "none";
+                									document.getElementById('II').style.display = "block";
+                									imageStatus = 1;} 
+                                            else {	document.getElementById('VIII').style.display = "block"; 
+                    					            document.getElementById('II').style.display = "none";
+                    					            imageStatus = 0;}
+                    					            //document.getElementById('gimme').innerHTML = imageStatus;
+                    				            }
+                    </script>
+<!------------------------------------------------------------------------------------------------------------------->
+
+            
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL III--> 
+            <img id="IIIa" src="assets/images/III-europemap.png" class="hoverItems" style="">
+            <img id="IIIb" src="assets/images/III-directionsI.png" class="hoverItems" style="position: absolute; right: 7vw; top: 210vw; height: 10%; width: auto;">
+
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL IV-->
+
+            <img id="IV_Mirror" src="assets/images/IV-mirror.png" class="hoverItems" style="top: 170vw; right: 30vw; width: 40vw;">
+
+
+
+
+
+
+                  
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL V--> 
+            
+
+                <img src="assets/images/fjord.png" style="position: absolute; top: 107.7vw; left: 0.3vw; width: 30vw; height: auto; z-index: 1;">
+
+                <div class="dropzone" id="al" style="border: solid red 0px; position: absolute; top: 107vw; border: solid white 0px; width: 300px; height: auto; z-index: 70">
+                    <div class='draggable' style="border: dashed pink 0px;">
+                        <img class="graveimg" src="assets/images/blanco.png" alt="" style="border: dashed brown 0px;">
+                    </div>
+                </div>
+
+
+                
+
+           
+
+            <div class="dropzone" id="be" style="border: solid blue 0px; position: absolute; top: 180vw; left: 65vw">
+                    <div class='draggable' style="border: solid darkblue 0px">
+                        <img class="graveimg" src="assets/images/orange.png" alt="" style="border: solid lightblue 0px; z-index: 79; width: 30vw; height: 23.8vw;">
+                    </div>
+                </div>
+<!------------------------------------------------------------------------------------------------------------------->
+
+        
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL VI-->
+
+            <img id="VI" src="assets/images/VI-polaroid.png" class="hoverItems" 
+                    style=" top: 105vw; 
+                            right: 7vw; 
+                            width: 15vw;  
+                            filter: brightness(130%) drop-shadow(-8px 8px 10px rgba(255,0,0,0.4));
+                            ">     
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL VII-->
+
+            <div id="squareId" class="squareClass" onmousedown="" onclick="playPuzzleVII();"></div>    
+                
+            <button id="playButtonId" class="audioPlayClass" onmousedown="playPuzzleVII();" onclick=""></button>
+                
+
+
+            <div hidden id="puzzleVIIrules">
+                 
+            </div>
+
+                        <audio id="puzzleVIIAudio">
+                                <source src="assets/images/puzzleVII.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                        </audio>
+
+
+             <img id="VIIfrontsideOG" src="assets/images/VII-frontside.png" style="position: absolute; right: 9vw; top: 140vw; width: 30vw; z-index: 1;" >
+            <!--CLICK BG-->
+            <img hidden id="VIIbackside" src="assets/images/VII-backside.png" class="hoverVII" style="position: absolute; right: 9vw; top: 140vw; width: 30vw" onmousedown="cdSwap()">
+            <img hidden id="VIIfrontside" src="assets/images/VII-frontside.png" class="hoverItems" style="position: absolute; right: 9vw; top: 140vw; width: 30vw;" onmousedown="cdSwap()">
+            <!--<h1 id="gimme" style="position: absolute; left: 1vw; top: 230vh;" >val</h1> -->
+                    <script>
+                    var cdStatus = 0;
+                    function cdSwap() {
+                            if (cdStatus === 0) {   document.getElementById('VIIbackside').style.display = "none";
+                                                    document.getElementById('VIIfrontside').style.display = "block";
+                                                    cdStatus = 1;} 
+                                            else {  document.getElementById('VIIbackside').style.display = "block"; 
+                                                    document.getElementById('VIIfrontside').style.display = "none";
+                                                    cdStatus = 0;}
+                                                    //document.getElementById('gimme').innerHTML = imageStatus;
+                                                }
+                    </script>
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--USB--> 
+            
+            <img id="usbStick" src="assets/images/usbStick.png" style="position: absolute; right: 29vw; top: 115vw; width: 10vw; cursor: grab;" onclick="insertUSB()" onmousedown="insertUSB()">
+            <!--<h1 id="gimme" style="position: absolute; left: 1vw; top: 230vh;" >val</h1> -->
+                    
+            <div id="usbModal" class="modal" style="z-index: 89;">
+                    <div class="usb-modal-content">
+
+                                <div id="zout" style="width: 5vw; height: 5vw; background-color: white; z-index: 100; position: absolute; top: 5vh; right: 5vw; background-image: url('assets/images/x.png'); background-size: cover; border-radius: 50%;" onclick="closeUSB()"></div>
+
+                                
+                                <video id="videoUSB" autoplay muted style="height: 100%; width: 100%; background-color: red;">
+                                  <source src="assets/images/usbVideo.mp4" type="video/mp4">
+                                  <source src="movie.ogg" type="video/ogg">
+                                  Your browser does not support the video tag.
+                                </video>
+                                
+
+                            <!-- CODE INPUTTING -->
+                                <div hidden id="codeInputtingDiv" style="border: solid yellow 0px; position: relative;  padding-top: 0vh; margin: 0;">
+
+                                  
+                                <form id="formForCode" class='code_input' style="border: solid blue 0px; width: 100%;">
+                                <h2 style="margin-bottom: 0px; padding-bottom: 0px; font-size: 6vh; ">ENTER CODE BELOW</h2>
+                                <h1 style="color: red; font-family: Times; font-size: 4vh; margin-top: 0px; padding-top: 0px;"> to crack the code</h1>
+
+
+                                <input id="inputRom1" maxlength='8' type="text"/>
+                                <input hidden id="inputRom2" maxlength='1' type="text" inputmode="decimal"/>
+                                <input hidden id="inputRom3" maxlength='1' type="text" inputmode="decimal"/>
+                            
+                                 <br>
+                                <input type="button" class="buttonSubmit" onclick="codeInput()" style="background-color: white;" value="SUBMIT">
+
+                                <p id="wrongAnswerId" style="color: green; z-index: 100; position: absolute; left: 40%; top: 100%; color: white; font-size: 3vh;"></p>
+
+                                  </form>
+
+                                </div><!--END OF CODE INPUTTING-->
+
+
+
+                                <div hidden id="binaryDiv" style="width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); border: white;"><a href="assets/images/diary.pdf" target="_blank" download>
+                                  <img src="assets/images/pdfImage.png" class="linkimage" alt="W3Schools" width="104" height="142" style="margin: 13%;">
+                                </a></div>
+
+                    </div>
+            </div>
+
+                    <script>
+                    var usbStatus = 0;
+                    function insertUSB() {
+                                            document.getElementById('usbModal').style.display = "block";
+                                            
+
+                                            setTimeout(function(){ 
+                                                                    document.getElementById('videoUSB').style.display = "none";
+                                                                    document.getElementById('codeInputtingDiv').style.display = "block";
+                                                                }, 2400);
+                                            
+                                             }
+
+
+
+                                            //THE SCRIPT FOR CODE
+
+                          function codeInput() {
+                          var wrongResponse;
+                          var blankResponse;
+                          var puzzleOne =  document.getElementById('inputRom1').value;
+                          var puzzleTwo =  document.getElementById('inputRom2').value;
+                          var puzzleThree =  document.getElementById('inputRom3').value;
+
+
+                             if ((puzzleOne == 'Tea') || (puzzleOne == 'TEA') || (puzzleOne == 'tea'))  
+                             
+                             {document.getElementById('wrongAnswerId').innerHTML = "yessss";
+                                document.getElementById('codeInputtingDiv').style.display = "none";
+                                document.getElementById('binaryDiv').style.display = "block";
+
+                          
+                                } else {
+                          document.getElementById('wrongAnswerId').innerHTML = "No, that's not right.";
+                          document.getElementById('binaryDiv').innerHTML = "No, that's not right.";
+
+                          //var x = document.getElementById("failureAudio");x.play();
+                          //setTimeout(function() 
+                           // {
+                           // document.getElementById('wrongAnswerId').innerHTML = " "; }, 
+                           // 1000);
+                          } 
+                        }
+
+
+
+                        function closeUSB() {document.getElementById('usbModal').style.display = "none";}
+
+                    </script>
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<script>
+
+
+      
+
+var l = 0;
+
+function playPuzzleVII()
+        {
+            var x = document.getElementById("puzzleVIIAudio"); 
+            if (l === 0) {
+            x.play();
+            l = 1;
+          } else {
+            x.pause();
+            l = 0;
+          }
+
+
+          if (x.paused == true) {
+            document.getElementById('playButtonId').className = "audioPlayClass";
+          
+                  } else {//document.getElementById('temp').style.display = 'block';
+                          document.getElementById('playButtonId').className = "audioPauseClass";
+                }
+       // x.play(); 
+            //document.getElementById("buttonId").style.display = "none";
+            //document.getElementById("squareId").style.display = "none";
+
+        setTimeout(() => {
+                        document.getElementById("squareId").style.display = "none";
+                        document.getElementById("playButtonId").style.display = "none";
+                        document.getElementById("VIIfrontsideOG").style.display = "none";
+                        document.getElementById("VIIfrontside").style.display = "block";
+                            }, 65 * 1000);
+
+        }
+
+
+</script>
+
+
+
+
+
+
+ 
+
+
+    
+
+
+    
+
+  
+        
+
+       
+</body>
+
+</html>
